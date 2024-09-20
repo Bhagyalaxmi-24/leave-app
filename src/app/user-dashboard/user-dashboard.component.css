@@ -1,0 +1,93 @@
+/* Style for the User Dashboard */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Form Styles */
+form {
+  width: 40%;  /* Form width set to 40% */
+  margin: 0 auto;  /* Center the form */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+  width: calc(100% - 20px);  /* Input and button full width */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input {
+  background-color: #fff;
+  width: 40%;
+}
+
+button {
+  background-color: #007BFF;  /* Blue button color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    width: 80%;  /* Adjust form width for smaller screens */
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}

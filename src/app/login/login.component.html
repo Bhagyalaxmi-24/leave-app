@@ -1,0 +1,14 @@
+<body>
+
+<h2>Login</h2>
+<form (ngSubmit)="onSubmit()">
+  <input type="text" [(ngModel)]="username" name="username" placeholder="Enter Username" required>
+  <input type="password" [(ngModel)]="password" name="password" placeholder="Enter Password" required>
+  <select [(ngModel)]="role" name="role">
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+  </select>
+  <button type="submit">Login</button>
+</form>
+
+</body>

@@ -1,0 +1,28 @@
+<h2>User Dashboard</h2>
+
+<h3>Apply for Leave</h3>
+<input type="date" [(ngModel)]="leaveDate" placeholder="Leave Date" required>
+<input type="number" [(ngModel)]="leavedays" placeholder="how many days you want leave?" required>
+
+<input type="text" [(ngModel)]="leaveReason" placeholder="Reason" required>
+<button (click)="applyLeave()">Apply for Leave</button>
+
+<h3>Leave History</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Days</th>
+      <th>Reason</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let leave of leaveHistory">
+      <td>{{ leave.date }}</td>
+      <td>{{ leave.days }}</td>
+      <td>{{ leave.reason }}</td>
+      <td>{{ leave.status }}</td>
+    </tr>
+  </tbody>
+</table>

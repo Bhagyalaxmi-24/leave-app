@@ -1,0 +1,27 @@
+<h2>Admin Dashboard</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Leave Date</th>
+      <th>leave Days</th>
+      <th>Reason</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let leave of leaveRequests; let i = index">
+      <td>{{ leave.username }}</td>
+      <td>{{ leave.date }}</td>
+      <td>{{ leave.days }}</td>
+      <td>{{ leave.reason }}</td>
+      <td>{{ leave.status }}</td>
+      <td>
+        <button class="accept" (click)="acceptLeave(leave.username, leave.leaveIndex)">Accept</button>
+        <button class="reject" (click)="rejectLeave(leave.username, leave.leaveIndex)">Reject</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
