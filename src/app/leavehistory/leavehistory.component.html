@@ -1,0 +1,31 @@
+<body>
+  <h2>Your Leave History</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Reason</th>
+        <th>Days</th>
+        <th>Leave Type</th>
+        <th>Status</th>
+        <th>Employee Salary</th>
+        <th>Deduction</th>
+        <th>Total Salary after Deduction</th>
+        <th>Remaining Days to Take Leave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leaveHistory">
+        <td>{{ leave.date }}</td>
+        <td>{{ leave.type }}</td> <!-- Leave Type -->
+        <td>{{ leave.days }}</td>
+        <td>{{ leave.reason }}</td> <!-- Reason -->
+        <td>{{ leave.status }}</td>
+        <td>{{ leave.employeeSalary | currency: 'INR' }}</td>
+        <td>{{ leave.deduction | currency: 'INR' }}</td>
+        <td>{{ leave.totalSalary | currency: 'INR' }}</td>
+        <td>{{ leave.remainingDays }}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>

@@ -1,11 +1,27 @@
+<header>
+  <nav class="navbar">
+      <div class="logo">
+          <a href="#">AbsenceSync</a>
+      </div>
+      <ul class="nav-links">
+          <li><a routerLink="/apply">Leave History</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/logout" onclick="logout()">Logout</a></li>
+      </ul>
+  </nav>
+</header>
+
 <h2>Admin Dashboard</h2>
 
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Username</th>
+      <th>Department</th>
       <th>Leave Date</th>
-      <th>leave Days</th>
+      <th>Leave Days</th>
+      <th>Leave Type</th> <!-- Display leave type here -->
       <th>Reason</th>
       <th>Status</th>
       <th>Actions</th>
@@ -13,10 +29,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let leave of leaveRequests; let i = index">
+      <td>{{leave.employeeId}}</td>
       <td>{{ leave.username }}</td>
+      <td>{{leave.employeeDepartment}}</td>
       <td>{{ leave.date }}</td>
       <td>{{ leave.days }}</td>
-      <td>{{ leave.reason }}</td>
+      <td>{{ leave.type }}</td> <!-- Display reason here -->
+      <td>{{ leave.reason }}</td> <!-- Display leave type here -->
       <td>{{ leave.status }}</td>
       <td>
         <button class="accept" (click)="acceptLeave(leave.username, leave.leaveIndex)">Accept</button>

@@ -1,13 +1,35 @@
-<h2>User Dashboard</h2>
 
-<h3>Apply for Leave</h3>
-<input type="date" [(ngModel)]="leaveDate" placeholder="Leave Date" required>
-<input type="number" [(ngModel)]="leavedays" placeholder="how many days you want leave?" required>
-
-<input type="text" [(ngModel)]="leaveReason" placeholder="Reason" required>
+<header>
+  <nav class="navbar">
+      <div class="logo">
+          <a href="#">AbsenceSync</a>
+      </div>
+      <ul class="nav-links">
+          <li><a routerLink="/apply">Leave History</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/logout" onclick="logout()">Logout</a></li>
+        </ul>
+  </nav>
+</header>
+<div class="apply">
+<h3>Apply for Leave </h3>
+<hr>
+<input type="date" [(ngModel)]="leaveDate" placeholder="Leave Date" class="leave1" required>
+<br>
+<input type="number" [(ngModel)]="leavedays" placeholder="how many days you want leave?" class="leave2" required>
+<br>
+<input type="text" [(ngModel)]="leaveType" placeholder="Reason" class="leave3" required>
+<select [(ngModel)]="leaveReason" class="leaveType" class="leave4" required>
+  <option value="" disabled selected>Select Leave Type</option>
+  <option value="Casual Leave">Casual Leave</option>
+  <option value="Sick Leave">Sick Leave</option>
+  <option value="Paid Leave">Paid Leave</option>
+  <option value="Maternity/Paternity Leave">Maternity/Paternity Leave</option>
+</select>
 <button (click)="applyLeave()">Apply for Leave</button>
 
-<h3>Leave History</h3>
+</div>
+<!-- <h3>Leave History</h3>
 <table>
   <thead>
     <tr>
@@ -25,4 +47,12 @@
       <td>{{ leave.status }}</td>
     </tr>
   </tbody>
-</table>
+</table> -->
+
+<!-- <nav id="navbar">
+  
+
+
+</nav> -->
+
+

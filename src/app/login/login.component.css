@@ -1,4 +1,7 @@
+
 /* Style for the Login Form */
+
+
 h2 {
   text-align: center;
   color: #333;
@@ -55,4 +58,11 @@ select {
   input, select, button {
     font-size: 14px;
   }
+}
+a{
+  text-decoration: none;
+  color: blue; /* Initial color */
+
+  /* Add a transition effect */
+  transition: color 0.3s ease;
 }

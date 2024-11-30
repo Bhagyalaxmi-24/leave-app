@@ -1,0 +1,55 @@
+h2{
+text-align: center;
+font-size: xx-large;
+font-family: 'Times New Roman', Times, serif;
+
+}
+h2:hover{
+  color: #0d0909;
+  transform: scale(1.05); /* Slightly enlarge the text */
+  text-shadow: 2px 2px 5px rgba(48, 143, 220, 0.3);
+
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders are merged for a cleaner look */
+  margin: 20px 0;
+  border: 1px solid #ddd; /* Adds a border around the entire table */
+}
+
+thead {
+  background-color: #bdddeb;
+}
+
+thead th {
+  padding: 10px;
+  text-align: center;
+  border-top:2px solid #0b0808;
+  border-left: 2px solid #0b0808;
+  border-bottom: 2px solid #0d0909; /* Adds a bottom border to the header cells */
+  border-right: 1px solid #0b0808; /* Adds a right border to header cells */
+
+
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row colors for better readability */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd; /* Adds a bottom border to table cells */
+  border-right: 1px solid #090808; /* Adds a right border to table cells */
+  text-align: center;
+}
+
+tbody tr td:last-child,
+thead tr th:last-child {
+  border-right: black; /* Removes the right border from the last column */
+}

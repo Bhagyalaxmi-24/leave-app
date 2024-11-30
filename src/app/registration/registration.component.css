@@ -1,0 +1,39 @@
+body{
+
+
+}
+h2{
+    position: absolute;
+    top: 1%;
+    text-align: center;
+    left: 35%;
+
+}
+div{
+width: 25%;
+height: 55%;
+background-color: lightskyblue;
+position: absolute;
+top:45%;
+align-content: center;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 90px;
+}
+form{
+position: absolute;
+top: 20%;
+left: 24%;
+}
+.box{
+    height: 0.8cm;
+    width: 5cm;
+    border-radius: 10px;
+}
+button{
+    position: absolute;
+    left: 30%;
+    border-radius: 9px;
+    height: 0.9cm;
+    width: 90px;
+}

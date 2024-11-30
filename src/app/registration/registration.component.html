@@ -1,0 +1,20 @@
+<body>
+  <div>
+    <h2>Register</h2>
+   
+    <form (ngSubmit)="onSubmit()" class="form">
+        <input type="text" [(ngModel)]="id" name="id" placeholder="Enter Employee ID" class="box"  required>
+        <br><br>
+      <input type="text" [(ngModel)]="username" name="username" placeholder="Enter Username" class="box" required>
+      <br><br>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Enter Password" class="box" required>
+      <br><br>
+      <input type="text" [(ngModel)]="department" name="department" placeholder="Department" class="box" required>
+      <br><br>
+      <input type="number" [(ngModel)]="salary" name="salary" class="box" placeholder="Salary" required>
+     <br><br>
+      <button type="submit" class="button">Register</button>
+    </form>
+  </div>
+  </body>
+  
